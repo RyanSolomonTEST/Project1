@@ -7,17 +7,7 @@ var http = require('http'),
 var listingData, server;
 
 var requestHandler = function(request, response) {
-  var parsedUrl = url.parse(request.url);
-
-  if (parsedUrl.pathname = '/listings'){
-      response.write(listingData)
-  } 
-  else{
-    response.writeHead(404, {"Content-Type": "text/plain");
-    response.write('Bad gateway error');
-
-  }
-  response.end();
+ 
 
 
   /*
@@ -41,11 +31,6 @@ var server =
 
 fs.readFile('listings.json', 'utf8', function(err, data) {
 
-  if (err){
-    throw err;
-  }
-
-  listingData = data;
 
 
   /*
